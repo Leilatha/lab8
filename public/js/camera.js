@@ -5,6 +5,8 @@ function initCamera() {
   //        $('<Your code here>'));
 }
 
+console.log($('.camera-canvas'));
+capture($('#camera-video'), $('#camera-canvas'), $('#camera-button'));
 function capture(video, canvas, snapshotButton) {
   //Adopted from https://dev.opera.com/articles/media-capture-in-mobile-browsers/
   //Setup navigator for all versions of browsers.
@@ -28,8 +30,6 @@ function capture(video, canvas, snapshotButton) {
   };
 
   var errorCallback = function() {
-    //The error callback function. If getUserMedia errored, print that
-    //we failed.
     console.log('Capture failed');
   };
 
