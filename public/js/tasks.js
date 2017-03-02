@@ -1,7 +1,6 @@
 $(document).ready(function() {
   $('#taskForm').submit(function(e) {
     e.preventDefault();
-
     var taskName = $('#addTask').val();
     $.post('addTask', { taskName: taskName }, postCallback);
   });
