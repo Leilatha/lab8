@@ -42,7 +42,7 @@ app.get('/', index.view);
 // Example route
 // app.get('/users', user.list);
 app.get('/tasks', tasks.view);
-app.post('addTask', tasks.addTask);
+app.post('/addTask', tasks.addTask);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
